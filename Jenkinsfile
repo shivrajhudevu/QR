@@ -3,7 +3,11 @@ pipeline {
 
     stages {
 
-        Declarative: Checkout SCM  ✅
+       stage('Clone Code') {
+    steps {
+        git branch: 'main', url: 'https://github.com/shivrajhudevu/QR.git'
+    }
+}
 
         stage('Build Docker Image') {
             steps {
