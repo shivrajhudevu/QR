@@ -12,7 +12,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    'docker rm -f qr-container || true'
+                     'docker rm -f qr-container || true'
                 }
             }
         }
