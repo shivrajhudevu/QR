@@ -18,13 +18,10 @@ pipeline {
         }
 
         stage('Run Container') {
-            steps {
-                script {
-                    sh 'docker rm -f qr-container || true'
-                    sh 'docker run -d -p 3000:3000 --name qr-container qr-app'
-                }
-            }
-        }
+    steps {
+        bat 'docker run -p 3000:3000 qr-app'
+    }
+}
 
     }
 }
