@@ -12,7 +12,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                     'docker rm -f qr-container || true'
+                    git branch: 'main', url: 'https://github.com/shivrajhudevu/QR.git'
                 }
             }
         }
